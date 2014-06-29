@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(int argc, const char *argv[])
 {
-	int n,i,s,t;
+	int n,i,s,t,z;
 	int a[1000];
 	printf("Please enter an unsigned integer\n");
 	scanf("%d",&n);
