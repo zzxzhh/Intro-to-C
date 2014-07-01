@@ -10,7 +10,7 @@ int main(int argc, const char *argv[])
 		if (n!= 1){
 		n = n / 2;
 		i++;
-		}`
+		}
 		else break;
 	}
 	t = 1;
