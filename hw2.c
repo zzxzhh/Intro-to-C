@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <strings.h>
 struct node {
 	int salary;
 	long phone;
@@ -27,8 +29,10 @@ struct node *create_node(char* nam1,char* nam2,int cnt1,int cnt2,struct node *nx
 	struct node *new_node;
 	new_node = (struct node *) malloc(1 * sizeof(struct node));
 	/* contents passed from the function */
-	new_node->name = nam1;
-	new_node->surname = nam2;
+	new_node->name  = (char *) malloc(50* sizeof(char));
+	new_node->surname  = (char *) malloc(50 * sizeof(char));
+	strncpy(new_node->name,nam1,50);
+	strncpy(new_node->surname,nam2,50);
 	new_node->salary = cnt1;
 	new_node->phone = cnt2;
 	new_node->next = nxt;
